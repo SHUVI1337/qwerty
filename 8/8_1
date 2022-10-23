@@ -1,0 +1,25 @@
+
+def main(a,b):
+    list1=set(a)
+    list2=set(b)
+    list3=set()
+    list3=list1.intersection(list2)
+    a1=len(list3)
+    
+    list4=set()
+    list4=list1.difference(list2)
+    list5=set()
+    list5=list2.difference(list1)
+    a2=len(list4)+len(list5)
+    
+    list1.difference_update(list2)
+    a3=len(list1)
+    
+    list1=set(a)
+    list2=set(b)
+    list2.difference_update(list1)
+    a4=len(list2)
+    return a1,a2,a3,a4
+if __name__=='__main__':
+    a,b=[(0, 33, 37, 6, 10, 44, 13, 47, 16, 18, 22, 25),(1, 38, 48, 8, 41, 7, 12, 47, 16, 40, 20, 23, 25)]
+    print(main(a,b))
