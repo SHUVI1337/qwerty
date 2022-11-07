@@ -1,0 +1,13 @@
+def main():
+    s=0
+    a=input()
+    b=1
+    for i in range(len(a)-1):
+        if a[i]==a[i+1]:
+            b+=1
+        else:
+            s=max(s,b)
+            b=1
+    print(s)
+if __name__=='__main__':
+    main()
