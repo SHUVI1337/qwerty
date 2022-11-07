@@ -1,0 +1,23 @@
+def main():
+    a=input()
+    a=a.lower()
+    a=a.lstrip()
+    a = a.rstrip()
+    a=a.replace('    ', ' ')
+    a=a.replace('   ',' ')
+    a=a.replace('  ', ' ')
+    a=a+' '
+    s=''
+    w=''
+    for i in a:
+        if i!=' ':
+            w=w+i
+        else:
+            s=w+' '+s
+            w=''
+    if s=='':
+        print(w.capitalize())
+    s=s.capitalize()
+    print(s)
+if __name__=='__main__':
+    main()
