@@ -1,0 +1,11 @@
+def main():
+    s=''
+    a=input()
+    b=1
+    s=s+str(a[0])
+    if a[1].count(s)<2 and a[2].count(s)<2 and a[3].count(s)<2 and a[4].count(s)<2 and a[5].count(s)<2 and a[6].count(s)<2:
+        s
+
+    print(s)
+if __name__=='__main__':
+    main()
