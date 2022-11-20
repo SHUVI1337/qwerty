@@ -5,13 +5,11 @@ def main():
     b=1
     m=0
     for i in range(len(a)):
-        print(s)
         if a[i] in s:
             m=max(m,len(s))
             if len(a)>len(l):
                 l=s
             s=''
-            print(s)
         s = s + str(a[i])
     print(l)
 if __name__=='__main__':
