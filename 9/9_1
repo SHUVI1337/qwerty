@@ -1,0 +1,25 @@
+def main():
+    def spisok(a):
+        s = []
+        for i in range(a):
+            s.append([])
+            print('Имя ')
+            s[i].append(str(input()))
+            print('Фамилия ')
+            s[i][0] += " " + str(input())
+            print('Почтовый индекс ')
+            s[i].append(str(input()))
+        return s
+    def santa_users(spisok):
+        slovar = dict()
+        for i in spisok:
+            if i[1] != "":
+                slovar[i[0]] = i[1]
+            else:
+                slovar[i[0]] = None
+        return slovar
+    list = spisok(int(input("Колличество пользователей ")))
+    otv = santa_users(list)
+    print(otv)
+if __name__ == "__main__":
+    main()
