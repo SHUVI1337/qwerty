@@ -34,5 +34,6 @@ anim.save('sine_wave.gif', writer='imagemagick')
 
 ```python
 In: f(x) = 10x^2 * sin(x^2 + 5) While x [0,5]
-Out:
+Out: ![image](https://user-images.githubusercontent.com/115583245/212760616-2cbc3fcb-251c-45db-b2be-4b735407a866.png)
+
 ```
