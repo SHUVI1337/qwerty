@@ -83,10 +83,32 @@ Input:
 Output:
 [[1,2,3],[1,3,2],[2,1,3],[2,3,1],[3,1,2],[3,2,1]]
 ```
-
+Задается список строк.  Необходимо сгруппировать их в общий список по двум критериям:
+1) слова имеют одни и те же буквы
+2) слова одинаковой размерности
 
 ```python
+from itertools import *
 
+def main():
+    print('Введите элементы списка через запятые')
+    a = input()
+    a = str(a)
+    a = a.replace(" ", "")
+    a = a.split(",")
+    b = {str(sorted(a[0])): [a[0]]}
+    s =''
+    for k in range(1, len(a)):
+        s = str(sorted(a[k]))
+        if s in b:
+            o = sorted(a[k])
+            b[str(o)].append(a[k])
+        else:
+            o = sorted(a[k])
+            b[str(o)] = [a[k]]
+    print(b.values())
+if __name__ == "__main__":
+    main()
 ```
 
 
